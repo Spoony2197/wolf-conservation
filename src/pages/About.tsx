@@ -1,4 +1,6 @@
-import { Box, Container, Typography, Grid, Paper, Avatar } from '@mui/material';
+import React from 'react';
+import { Box, Container, Typography, Paper, Avatar } from '@mui/material';
+import { Grid } from '../components/CustomGrid';
 
 interface TeamMember {
   name: string;
@@ -79,7 +81,7 @@ const About = () => {
                 content: 'We\'ve protected over 1,000 square miles of wolf habitat and educated more than 10,000 students about wolf conservation.',
               },
             ].map((item, index) => (
-              <Grid item xs={12} md={4} key={index}>
+              <Grid component="div" item xs={12} md={4} key={index}>
                 <Paper
                   elevation={0}
                   sx={{
@@ -143,7 +145,7 @@ const About = () => {
 
           <Grid container spacing={4}>
             {teamMembers.map((member, index) => (
-              <Grid item xs={12} sm={6} md={3} key={index}>
+              <Grid component="div" item xs={12} md={4} key={index}>
                 <Paper
                   elevation={0}
                   sx={{
